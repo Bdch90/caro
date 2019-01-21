@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>GameCaro</h3>
+	<p id = 'game'></p><br>
+	<button onclick = 'change()' >Change</button><br>
+
+<script type="text/javascript">
+	var ket_qua=document.getElementById('game');
+ 	var ban_co=[];
+	var date='';
+	for (let x = 0 ; x< 5 ; x++) 
+	{
+        ban_co[x] = new Array('0','0','0','0','0');
+    }
+	for (let x=0;x<5;x++)
+	{
+		date+='<br>';
+		
+		for (let y=0;y<5;y++)
+		{
+			date+=ban_co[x][y]+'&nbsp;'+'&nbsp;';
+		}
+	}
+	ket_qua.innerHTML=date;
+	function change()
+	{
+		var X=prompt('X: ');
+		var Y=prompt('Y: ');
+		date='';
+		ban_co[X][Y]='x';
+		for (let x=0;x<5;x++)
+	{
+			date+='<br>';
+		
+			for (let y=0;y<5;y++)
+		{
+				date+=ban_co[x][y]+'&nbsp;'+'&nbsp;';
+		}
+	}
+		ket_qua.innerHTML=date;
+	}
+</script>
+</body>
+</html>
